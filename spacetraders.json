@@ -1,0 +1,7 @@
+{
+  "request_timeout_secs": 5,
+  "base_path": "http://127.0.0.1:4010",
+  "access_token": "string",
+  "call_sign": "hello",
+  "faction": "string"
+}
