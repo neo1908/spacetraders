@@ -11,6 +11,9 @@ pub struct GameConfig {
     pub access_token: String,
     pub call_sign: String,
     pub faction: String,
+
+    // State
+    pub headquarters: String,
 }
 
 impl GameConfig {
@@ -21,7 +24,8 @@ impl GameConfig {
             base_path: String::new(),
             access_token: String::new(),
             call_sign: String::new(),
-            faction: String::new()
+            faction: String::new(),
+            headquarters: String::new()
         }
     }
 
@@ -38,7 +42,8 @@ impl Default for GameConfig {
             base_path: "https://api.spacetraders.io/v2".to_owned(),
             access_token: String::new(),
             call_sign: String::new(),
-            faction: String::new()
+            faction: String::new(),
+            headquarters: String::new()
         }
     }
 }

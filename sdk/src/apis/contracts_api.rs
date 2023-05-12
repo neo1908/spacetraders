@@ -67,6 +67,9 @@ pub fn accept_contract(configuration: &configuration::Configuration, contract_id
         local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
     };
 
+    // BD - Needed as post uses empty body
+    local_var_req_builder = local_var_req_builder.header("content-length", 0);
+
     let local_var_req = local_var_req_builder.build()?;
     let mut local_var_resp = local_var_client.execute(local_var_req)?;
 
