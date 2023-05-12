@@ -17,7 +17,7 @@ use spacetraders_sdk::models::RegisterRequest;
 use chrono::{DateTime, Utc};
 use clap::Parser;
 use comfy_table::Table;
-use macros::answer;
+
 
 use crate::cli::Args;
 use crate::config::ConfigWrapper;
@@ -214,7 +214,7 @@ fn show_contracts(_args: HashMap<String, Value>, context: &mut ConfigWrapper) ->
             let mut table = Table::new();
             table.set_header(vec!["ID", "Faction", "Type", "Accepted", "Fulfilled", "Expiration"]);
             for contract in contracts {
-                let ctype = contract.r#type.type_id();
+                let _ctype = contract.r#type.type_id();
                 table.add_row(vec![contract.id, contract.faction_symbol, "".to_string(), contract.accepted.to_string(), contract.fulfilled.to_string(), contract.expiration]);
             }
 
@@ -297,7 +297,7 @@ fn get_waypoints(args: HashMap<String, Value>, context: &mut ConfigWrapper) -> R
     }
 }
 
-fn show_available_ships(args: HashMap<String, Value>, context: &mut ConfigWrapper) -> ReplResult<Option<String>> {
+fn show_available_ships(_args: HashMap<String, Value>, _context: &mut ConfigWrapper) -> ReplResult<Option<String>> {
     Ok(Some(String::new()))
 }
 
