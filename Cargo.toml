@@ -15,6 +15,6 @@ serde_json = "1.0.96"
 inquire = "0.6.2"
 spacetraders-sdk = {path= "./sdk"}
 chrono = "0.4.24"
-comfy-table = "6.1.4"
+comfy-table = "7.0.0"
 clap = { version="4.2.7", features=["derive"] }
 macros = {path = "./macros"}
